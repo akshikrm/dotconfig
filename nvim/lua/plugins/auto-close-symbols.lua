@@ -16,6 +16,9 @@ return {
 				["'"] = { escape = true, close = true, pair = "''" },
 				["`"] = { escape = true, close = true, pair = "``" },
 			},
+			options = {
+				disable_command_mode = true,
+			}
 		})
 	end,
 }
