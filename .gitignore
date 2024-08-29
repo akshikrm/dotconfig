@@ -1,0 +1,7 @@
+cache
+local
+
+**/.zsh_sessions
+**/.zsh_history
+**/.zcompdump
+**/zsh/plugins/**
