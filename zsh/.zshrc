@@ -1,7 +1,7 @@
 autoload -U compinit; compinit
 _comp_options+=(globdots) # With hidden files
 
-HISTFILE="$ZDOTDIR/.zhistory"    
+# HISTFILE="$ZDOTDIR/.zhistory"    
 SAVEHIST=1000
 HISTSIZE=999
 setopt share_history
