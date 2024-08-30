@@ -1,5 +1,4 @@
-autoload -U compinit; compinit
-_comp_options+=(globdots) # With hidden files
+source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # HISTFILE="$ZDOTDIR/.zhistory"    
 SAVEHIST=1000
@@ -22,15 +21,17 @@ export NVM_DIR="$HOME/.nvm"
 source $ZDOTDIR/prompt.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-function rave () {
-	if [[ $1 == '-d' ]]; then
-		find . -type d | fzf --preview='tree -C {} | head -n 50' --preview-label='[ Directory stats ]'
-		return 0
-	fi
-	if [[ $1 == '-f' ]]; then
-		find . -type f | fzf --preview='bat --color=always {}' --preview-label='[ File stats ]'
-		return 0
-	fi
-	print "Unknown flag"
-	return 0
-}
+eval "$(fzf --zsh)"
+
+# function rave () {
+# 	if [[ $1 == '-d' ]]; then
+# 		find . -type d | fzf --preview='tree -C {} | head -n 50' --preview-label='[ Directory stats ]'
+# 		return 0
+# 	fi
+# 	if [[ $1 == '-f' ]]; then
+# 		find . -type f | fzf --preview='bat --color=always {}' --preview-label='[ File stats ]'
+# 		return 0
+# 	fi
+# 	print "Unknown flag"
+# 	return 0
+# }
