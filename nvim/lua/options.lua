@@ -11,4 +11,4 @@ vim.opt.cursorline = true
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 vim.opt.scrolloff = 1
-
+vim.opt.mouse = ""

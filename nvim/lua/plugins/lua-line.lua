@@ -4,11 +4,11 @@ end
 
 return {
 	"nvim-lualine/lualine.nvim",
+	enabled=false,
 	config = function()
 		require("lualine").setup({
 			options = {
 				icons_enabled = true,
-				theme = "catppuccin",
 			},
 			sections = {
 				lualine_a = { "mode" },

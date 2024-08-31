@@ -5,6 +5,5 @@ return {
 
 	config = function()
 		vim.cmd.colorscheme("catppuccin")
-		-- require("catppuccin").setup({})
 	end,
 }
