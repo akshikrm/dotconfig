@@ -29,8 +29,9 @@ return {
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, { desc = "Show documentation" })
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, { desc = "[G]oto [D]efenition" })
-			vim.keymap.set("n", "g.", vim.lsp.buf.code_action, { desc = "Code Actions" })
-			vim.keymap.set("n", "god", vim.diagnostic.open_float, { desc = "[Open] [Diagnostics]" })
+			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "[G]oto [I]mplementation" })
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
+			vim.keymap.set("n", "<leader>ed", vim.diagnostic.open_float, { desc = "[Open] [Diagnostics]" })
 		end,
 	},
 }
