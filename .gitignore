@@ -2,6 +2,6 @@ cache
 local
 
 **/.zsh_sessions
-**/.zhistory
+**/.zsh_history
 **/.zcompdump
 **/zsh/plugins/**
