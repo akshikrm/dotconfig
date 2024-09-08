@@ -1,71 +1,60 @@
 return {
-	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
+	"neovim/nvim-lspconfig",
+	event = {"BufReadPre", "BufNewFile"},
+	dependencies = {
+		"hrsh7th/cmp-nvim-lsp",
 	},
-	{
 
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "html", "emmet_ls" },
-			})
-		end,
-	},
-	{
-		"rsh7th/cmp-nvim-lsp",
-	},
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			local default_capabilities = require("cmp_nvim_lsp").default_capabilities()
+	config = function()
+		local lspconfig = require("lspconfig")
+		local mason_lspconfig = require("mason-lspconfig")
+		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		local keymap = vim.keymap -- for conciseness
+		vim.api.nvim_create_autocmd("LspAttach", {
+			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+			callback = function(ev)
+				-- Buffer local mappings.
+				--         -- See `:help vim.lsp.*` for documentation on any of the below functions
+				local opts = { buffer = ev.buf, silent = true }
 
-			local lspconfig = require("lspconfig")
+				-- set keybinds
 
-			lspconfig.tsserver.setup({
-				capabilities = default_capabilities,
-			})
+				-- opts.desc = "Go to declaration"
+				-- keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
 
-			lspconfig.lua_ls.setup({
-				capabilities = default_capabilities,
-			})
 
-			lspconfig.html.setup({
-				capabilities = default_capabilities,
-			})
 
-			lspconfig.emmet_ls.setup({
-				capabilities = default_capabilities,
-			})
 
-			vim.keymap.set("n", "gi", vim.lsp.buf.implementation, { desc = "[G]oto [I]mplementation" })
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "Code Actions" })
-		end,
-	},
-	{
-		"hrsh7th/nvim-cmp",
-		config = function()
-			local cmp = require("cmp")
-			cmp.setup({
-				window = {
-					completion = cmp.config.window.bordered(),
-					documentation = cmp.config.window.bordered(),
-				},
-				mapping = cmp.mapping.preset.insert({
-					["<C-b>"] = cmp.mapping.scroll_docs(-4),
-					["<C-f>"] = cmp.mapping.scroll_docs(4),
-					["<C-Space>"] = cmp.mapping.complete(),
-					["<C-e>"] = cmp.mapping.abort(),
-					["<C-y>"] = cmp.mapping.confirm({ select = true }),
-				}),
-				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-				}, {
-					{ name = "buffer" },
-				}),
-			})
-		end,
-	},
+				opts.desc = "[C]ode [A]ction"
+				keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
+
+				opts.desc = "[R]ename"
+				keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
+
+
+				opts.desc = "[E]xpand [D]iagnostics"
+				keymap.set("n", "<leader>ed", vim.diagnostic.open_float, opts) -- show diagnostics for line
+
+
+				opts.desc = "Show documentation for what is under cursor"
+				keymap.set("n", "K", vim.lsp.buf.hover, opts) -- show documentation for what is under cursor
+
+				opts.desc = "Restart LSP"
+				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+			end,
+
+		})
+
+		local capabilities = cmp_nvim_lsp.default_capabilities()
+
+		mason_lspconfig.setup_handlers({
+			-- default handler for installed servers
+			function(server_name)
+				lspconfig[server_name].setup({
+					capabilities = capabilities,
+				})
+			end,
+		})
+
+	end,
 }
