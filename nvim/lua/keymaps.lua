@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>fe", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>fe", vim.cmd.Lex)
 vim.keymap.set("n", "<C-'>", function()
 	vim.cmd("set rnu!")
 end)
