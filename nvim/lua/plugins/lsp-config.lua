@@ -16,6 +16,7 @@ return {
 	},
 	{
 		"rsh7th/cmp-nvim-lsp",
+		event="InsertEnter",
 	},
 	{
 		"neovim/nvim-lspconfig",
