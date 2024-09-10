@@ -12,6 +12,7 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 alias d='dirs -v'
+alias lg='lazygit'
 for index ({1..9}) alias "$index"="cd +${index}"; unset index
 
 export NVM_DIR="$HOME/.nvm"
