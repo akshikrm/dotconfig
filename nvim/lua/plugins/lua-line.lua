@@ -14,6 +14,14 @@ return {
 				lualine_y = { "diff", "branch" },
 				lualine_z = { "location" },
 			},
+			inactive_sections = {
+				lualine_a = {},
+				lualine_b = { "filetype" },
+				lualine_c = { "filename" },
+				lualine_x = { "diagnostics" },
+				lualine_y = { "diff", "branch" },
+				lualine_z = { "location" },
+			},
 		})
 	end,
 }
