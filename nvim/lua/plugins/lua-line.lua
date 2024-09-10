@@ -1,7 +1,3 @@
-local function lualineTime()
-	return os.date("%d %b %a %H:%M", os.time())
-end
-
 return {
 	"nvim-lualine/lualine.nvim",
 	enabled = true,
@@ -12,10 +8,10 @@ return {
 			},
 			sections = {
 				lualine_a = { "mode" },
-				lualine_b = { "branch" },
-				lualine_c = { "filename" },
+				lualine_b = { "filetype" },
+				lualine_c = { "buffers" },
 				lualine_x = { "diagnostics" },
-				lualine_y = { lualineTime },
+				lualine_y = { "diff", "branch" },
 				lualine_z = { "location" },
 			},
 		})
