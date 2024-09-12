@@ -1,4 +1,3 @@
-
 SAVEHIST=1000
 HISTSIZE=999
 setopt share_history
@@ -19,6 +18,11 @@ export NVM_DIR="$HOME/.nvm"
 
 eval "$(fzf --zsh)"
 
-source $ZDOTDIR/prompt.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $ZDOTDIR/gitstatus/gitstatus.prompt.zsh
+
+NEWLINE=$'\n' 
+PS1='%~ ${GITSTATUS_PROMPT}${NEWLINE}> '
+
+neofetch
