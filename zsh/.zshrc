@@ -1,6 +1,4 @@
-# source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
-# HISTFILE="$ZDOTDIR/.zhistory"    
 SAVEHIST=1000
 HISTSIZE=999
 setopt share_history
@@ -20,23 +18,7 @@ export NVM_DIR="$HOME/.nvm"
 	[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" 
 
 eval "$(fzf --zsh)"
+
 source $ZDOTDIR/prompt.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-
-# function rave () {
-# 	if [[ $1 == '-d' ]]; then
-# 		find . -type d | fzf --preview='tree -C {} | head -n 50' --preview-label='[ Directory stats ]'
-# 		return 0
-# 	fi
-# 	if [[ $1 == '-f' ]]; then
-# 		find . -type f | fzf --preview='bat --color=always {}' --preview-label='[ File stats ]'
-# 		return 0
-# 	fi
-# 	print "Unknown flag"
-# 	return 0
-# }
-#
-bindkey '^I' menu-select
-bindkey "$terminfo[kcbt]" menu-select
