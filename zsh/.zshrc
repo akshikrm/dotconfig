@@ -1,4 +1,4 @@
-source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 # HISTFILE="$ZDOTDIR/.zhistory"    
 SAVEHIST=1000
@@ -19,10 +19,11 @@ export NVM_DIR="$HOME/.nvm"
 	[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 	[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" 
 
+eval "$(fzf --zsh)"
 source $ZDOTDIR/prompt.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-eval "$(fzf --zsh)"
 
 # function rave () {
 # 	if [[ $1 == '-d' ]]; then
@@ -36,3 +37,6 @@ eval "$(fzf --zsh)"
 # 	print "Unknown flag"
 # 	return 0
 # }
+#
+bindkey '^I' menu-select
+bindkey "$terminfo[kcbt]" menu-select
