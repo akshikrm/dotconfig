@@ -6,3 +6,4 @@ local
 **/.zsh_history
 **/.zcompdump
 **/zsh/plugins/**
+**/tmux/plugins/**
