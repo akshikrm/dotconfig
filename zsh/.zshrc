@@ -24,5 +24,3 @@ source $ZDOTDIR/gitstatus/gitstatus.prompt.zsh
 
 NEWLINE=$'\n' 
 PS1='%~ ${GITSTATUS_PROMPT}${NEWLINE}> '
-
-neofetch
