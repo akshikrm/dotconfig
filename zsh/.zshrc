@@ -23,4 +23,4 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/gitstatus/gitstatus.prompt.zsh
 
 NEWLINE=$'\n' 
-PS1='%~ ${GITSTATUS_PROMPT}${NEWLINE}> '
+PS1='%~ ${GITSTATUS_PROMPT}${NEWLINE}$ '
