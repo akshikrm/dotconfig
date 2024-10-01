@@ -5,10 +5,10 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
-		local mason = require("mason").setup()
+		require("mason").setup()
 		local mason_lspconfig = require("mason-lspconfig")
 		mason_lspconfig.setup({
-			ensure_installed = { "lua_ls", "tsserver", "html", "emmet_ls" },
+			ensure_installed = { "lua_ls", "ts_ls", "html", "emmet_ls" },
 		})
 	end,
 }
