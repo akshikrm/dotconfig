@@ -1,0 +1,12 @@
+bat
+fzf
+lazygit
+neovim
+nvm
+ripgrep
+tldr
+tmux
+tree
+tree-sitter
+zsh-autocomplete
+zsh-autosuggestions
