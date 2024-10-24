@@ -1,6 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
+	lazy = true,
 	dependencies = {
 		"hrsh7th/cmp-nvim-lsp",
 	},
@@ -21,6 +22,12 @@ return {
 
 				-- opts.desc = "Go to declaration"
 				-- keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
+
+				opts.desc = "Go to definition"
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+
+				vim.keymap.set("n", "[d", vim.diagnostic.goto_next, opts)
+				vim.keymap.set("n", "]d", vim.diagnostic.goto_prev, opts)
 
 				opts.desc = "[C]ode [A]ction"
 				keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection

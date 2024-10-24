@@ -2,6 +2,7 @@ return {
 
 	"williamboman/mason.nvim",
 	dependencies = {
+		lazy = true,
 		"williamboman/mason-lspconfig.nvim",
 	},
 	config = function()
