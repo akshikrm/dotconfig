@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>fe", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = "[F]ile [E]xplorer" })
 vim.keymap.set("n", "<leader>gf", vim.cmd.GFiles)
 vim.keymap.set("n", "<leader>pf", vim.cmd.Files)
 vim.keymap.set("n", "<leader>a", vim.cmd.Buffers)
