@@ -1,1 +1,1 @@
-vim.cmd("set statusline=[%n]-%f\\ %m%=%l,%c\\ %y")
+vim.cmd("set statusline=%m%<%f%=%l,%c\\ %y")
