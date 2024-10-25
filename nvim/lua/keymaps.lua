@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>fe", vim.cmd.Ex, { desc = "[F]ile [E]xplorer" })
 vim.keymap.set("n", "<C-f>", vim.cmd.GFiles, { desc = "Open files tracked by git" })
-vim.keymap.set("n", "<C-p>", vim.cmd.Files({ desc = "Open files in current working directory" }))
+vim.keymap.set("n", "<C-p>", vim.cmd.Files, { desc = "Open files in current working directory" })
 vim.keymap.set("n", "<C-x>", vim.cmd.Buffers, { desc = "Show a list of currently open buffers" })
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Jump half a page and down align the line to middle" })
