@@ -18,9 +18,9 @@ vim.opt.updatetime = 50
 
 vim.opt.smartcase = true
 vim.opt.ignorecase = true
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 vim.opt.cursorline = true
 vim.opt.splitbelow = true
-vim.opt.splitright = false
+vim.opt.splitright = true
