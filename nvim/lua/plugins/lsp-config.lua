@@ -20,9 +20,6 @@ return {
 
 				-- set keybinds
 
-				-- opts.desc = "Go to declaration"
-				-- keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
-
 				opts.desc = "Go to definition"
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 
@@ -52,6 +49,10 @@ return {
 
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+
+				opts.desc = "Format Document"
+				keymap.set("n", "<leader>fd", vim.lsp.buf.format, opts) -- mapping to restart lsp if necessary
+
 			end,
 		})
 

@@ -5,11 +5,12 @@ return {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 	},
+
 	config = function()
 		local cmp = require("cmp")
 		cmp.setup({
 			window = {
-				completion = cmp.config.window.bordered(),
+				-- completion = cmp.config.window.bordered(),
 				documentation = cmp.config.window.bordered(),
 			},
 			mapping = cmp.mapping.preset.insert({
