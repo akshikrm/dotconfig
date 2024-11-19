@@ -7,7 +7,70 @@ vim.keymap.set("n", "<C-b>", vim.cmd.Buffers, { desc = "Show a list of currently
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Jump half a page and down align the line to middle" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Jump half a page and up align the line to middle" })
 
-vim.keymap.set("n", "n", "nzzzv", { desc = "Just to the next search term and move the line to the middle" })
+-- vim.keymap.set("n", "n", "nzzzv", { desc = "Just to the next search term and move the line to the middle" })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 vim.keymap.set("n", "N", "Nzzzv", { desc = "Just to the previous search term and move the line to the middle" })
 
 vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left window" })

@@ -1,4 +1,4 @@
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 5
 vim.opt.mouse = ""
 
 vim.opt.relativenumber = true
@@ -9,7 +9,7 @@ vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.expandtab = false
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.spelllang = "en_us"
 vim.opt.spell = true

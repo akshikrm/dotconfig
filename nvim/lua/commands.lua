@@ -18,3 +18,14 @@ vim.api.nvim_create_autocmd("BufWritePost", {
 		vim.lsp.buf.format()
 	end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "markdown",
+	callback = function()
+		print("opened markdown file")
+		vim.lsp.start({
+			name = "my-markdown-server",
+			cmd = { "/Users/raven/golang-lsp/dist" }
+		})
+	end
+})
