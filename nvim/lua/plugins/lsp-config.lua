@@ -52,7 +52,6 @@ return {
 
 				opts.desc = "Format Document"
 				keymap.set("n", "<leader>fd", vim.lsp.buf.format, opts) -- mapping to restart lsp if necessary
-
 			end,
 		})
 

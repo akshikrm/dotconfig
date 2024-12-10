@@ -9,14 +9,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
-vim.api.nvim_create_autocmd("BufWritePost", {
-	desc = "Format File on saving",
-	group = group,
-
-	callback = function()
-		vim.lsp.buf.format()
-	end,
-})
+-- uim.api.nvim_create_autocmd("BufWritePost", {
+-- 	desc = "Format File on saving",
+-- 	group = group,
+-- 	callback = function()
+-- 		vim.lsp.buf.format()
+-- 	end,
+-- })
 
 -- vim.api.nvim_create_autocmd("FileType", {
 -- 	pattern = "markdown",
