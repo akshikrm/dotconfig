@@ -9,7 +9,7 @@ return {
 		require("mason").setup()
 		local mason_lspconfig = require("mason-lspconfig")
 		mason_lspconfig.setup({
-			ensure_installed = { "lua_ls", "ts_ls", "html", "emmet_ls", "gopls", "eslint_d", "prettier" },
+			ensure_installed = { "lua_ls", "ts_ls", "html", "emmet_ls", "gopls", "marksman" },
 		})
 	end,
 }
