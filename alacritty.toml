@@ -1,0 +1,17 @@
+[general]
+	live_config_reload=true
+
+[window]
+	decorations="None"
+	padding ={x = 0, y=0}
+	dynamic_padding= true
+
+[font]
+	normal={family="MesloLGS Nerd Font"}
+	size=15
+
+[mouse]
+	hide_when_typing=true
+
+[colors.primary]
+		background="#000000"
