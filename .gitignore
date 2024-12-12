@@ -8,5 +8,6 @@ raycast
 **/.zhistory
 **/.zsh_history
 **/.zcompdump
+**/.zcompcache
 **/zsh/plugins/**
 **/tmux/plugins/**
