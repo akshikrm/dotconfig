@@ -17,10 +17,12 @@ vim.opt.spell = true
 
 vim.opt.updatetime = 50
 
-vim.opt.smartcase = true
+vim.opt.smartcase = false
 vim.opt.ignorecase = true
-vim.opt.hlsearch = true
+vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.cursorline = true
 vim.opt.splitright = true
+
+vim.opt.statusline = "%y%f  %= <%-14.(%l,%c>%) %P"
