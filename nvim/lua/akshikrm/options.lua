@@ -33,4 +33,4 @@ vim.opt.incsearch = true
 vim.opt.cursorline = true
 vim.opt.splitright = true
 
-vim.opt.statusline = "%y%f  %= <%-14.(%l,%c>%) %P"
+vim.opt.statusline = "%y[%n] %t%h%m%r%w  %=  %l,%c | %P"
