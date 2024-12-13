@@ -23,7 +23,7 @@
 	background = "0x000000"
 	foreground = "0x686868"
 [colors.cursor]
-	text = "0x686868"     
+	text = "0x242424"     
 	cursor = "0xd8d8d8"  
 
 [colors.normal]
