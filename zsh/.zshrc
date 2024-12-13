@@ -25,7 +25,6 @@ export NVM_DIR="$HOME/.nvm"
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/gitstatus/gitstatus.prompt.zsh
-source $ZDOTDIR/scripts.sh
 
 NEWLINE=$'\n' 
 PS1='%~ ${GITSTATUS_PROMPT}${NEWLINE}$ '
