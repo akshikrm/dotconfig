@@ -20,8 +20,6 @@ export NVM_DIR="$HOME/.nvm"
 	[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 	[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" 
 
-
-
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/gitstatus/gitstatus.prompt.zsh
@@ -32,8 +30,10 @@ PS1='%~ ${GITSTATUS_PROMPT}${NEWLINE}$ '
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
 
-
+export FZF_DEFAULT_COMMAND="fzf --height 40% --tmux bottom,40% --border top --layout reverse --preview 'head {+}' --color='preview-border:-1' --highlight-line --preview-label='preview'"
 # GO
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:$GOBIN
