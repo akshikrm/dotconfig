@@ -16,17 +16,38 @@
 [mouse]
 	hide_when_typing=true
 
-[colors.primary]
-		background="#000000"
-		foreground="#c1c1c1"
-
-[colors.cursor]
-	text="#000000"
-	cursor="#c1c1c1"
-
-[colors.vi_mode_cursor]
-	text="#444444"
-	cursor="#a06666"
-
 [cursor]
 	unfocused_hollow=false
+
+[colors.primary]
+background = "0x000000"  # base00
+foreground = "0xb9a9b8"  # base05
+
+[colors.normal]
+black   = "0x000000"  # base00
+red     = "0xd58da2"  # base08
+green   = "0x97b0a4"  # base0B
+yellow  = "0xd8a9b1"  # base0A
+blue    = "0x9fa6c0"  # base0D
+magenta = "0xbca2b7"  # base0E
+cyan    = "0xadc2c9"  # base0C
+white   = "0xebe4ec"  # base07
+
+[colors.bright]
+black   = "0x121212"  # base01
+red     = "0xd58da2"  # base08
+green   = "0x97b0a4"  # base0B
+yellow  = "0xd8a9b1"  # base0A
+blue    = "0x9fa6c0"  # base0D
+magenta = "0xbca2b7"  # base0E
+cyan    = "0xadc2c9"  # base0C
+white   = "0xd5c3d6"  # base06
+
+[colors.cursor]
+text = "0x000000"       # Cursor text color
+cursor = "0xb9a9b8"     # Cursor color
+
+[colors.selection]
+text = "0x000000"
+background = "0x242424"  # base02
+
