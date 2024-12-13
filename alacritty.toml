@@ -20,34 +20,18 @@
 	unfocused_hollow=false
 
 [colors.primary]
-background = "0x000000"  # base00
-foreground = "0xb9a9b8"  # base05
+	background = "0x000000"
+	foreground = "0x686868"
+[colors.cursor]
+	text = "0x686868"     
+	cursor = "0xd8d8d8"  
 
 [colors.normal]
-black   = "0x000000"  # base00
-red     = "0xd58da2"  # base08
-green   = "0x97b0a4"  # base0B
-yellow  = "0xd8a9b1"  # base0A
-blue    = "0x9fa6c0"  # base0D
-magenta = "0xbca2b7"  # base0E
-cyan    = "0xadc2c9"  # base0C
-white   = "0xebe4ec"  # base07
-
-[colors.bright]
-black   = "0x121212"  # base01
-red     = "0xd58da2"  # base08
-green   = "0x97b0a4"  # base0B
-yellow  = "0xd8a9b1"  # base0A
-blue    = "0x9fa6c0"  # base0D
-magenta = "0xbca2b7"  # base0E
-cyan    = "0xadc2c9"  # base0C
-white   = "0xd5c3d6"  # base06
-
-[colors.cursor]
-text = "0x000000"       # Cursor text color
-cursor = "0xb9a9b8"     # Cursor color
-
-[colors.selection]
-text = "0x000000"
-background = "0x242424"  # base02
-
+black   = "0x242424" 
+red     = "0xd58da2" 
+green   = "0x97b0a4" 
+yellow  = "0xd9a68a" 
+blue    = "0x9fa6c0" 
+magenta = "0xbca2b7" 
+cyan    = "0xadc2c9" 
+white   = "0xebe4ec" 
