@@ -2,14 +2,14 @@ return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
 	lazy = true,
-	dependencies = {
-		"hrsh7th/cmp-nvim-lsp",
-	},
+	-- dependencies = {
+	-- 	"hrsh7th/cmp-nvim-lsp",
+	-- },
 
 	config = function()
 		local lspconfig = require("lspconfig")
 		local mason_lspconfig = require("mason-lspconfig")
-		local cmp_nvim_lsp = require("cmp_nvim_lsp")
+		-- local cmp_nvim_lsp = require("cmp_nvim_lsp")
 		local keymap = vim.keymap -- for conciseness
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
@@ -19,21 +19,14 @@ return {
 				local opts = { buffer = ev.buf, silent = true }
 
 				-- set keybinds
-
-				opts.desc = "Go to definition"
-				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+				opts.desc = "Go to declaration"
+				vim.keymap.set("n", "gd", vim.lsp.buf.declaration, opts)
 
 				opts.desc = "Go to declaration"
-				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
-
-				opts.desc = "Go to declaration"
-				vim.keymap.set("n", "gt", vim.lsp.buf.type_definition, opts)
+				vim.keymap.set("n", "gD", vim.lsp.buf.type_definition, opts)
 
 				opts.desc = "Go to implementation"
 				vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
-
-				vim.keymap.set("n", "<leader>dn", vim.diagnostic.goto_next, opts)
-				vim.keymap.set("n", "<leader>dp", vim.diagnostic.goto_prev, opts)
 
 				opts.desc = "[C]ode [A]ction"
 				keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
@@ -55,14 +48,13 @@ return {
 			end,
 		})
 
-		local capabilities = cmp_nvim_lsp.default_capabilities()
+		-- local capabilities = cmp_nvim_lsp.default_capabilities()
 
 		mason_lspconfig.setup_handlers({
 			-- default handler for installed servers
 			function(server_name)
-				lspconfig[server_name].setup({
-					capabilities = capabilities,
-				})
+				lspconfig[server_name].setup {
+				}
 			end,
 		})
 	end,
