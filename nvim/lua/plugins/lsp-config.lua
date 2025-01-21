@@ -1,5 +1,6 @@
 return {
 	"neovim/nvim-lspconfig",
+	dependencies = { 'saghen/blink.cmp' },
 	event = { "BufReadPre", "BufNewFile" },
 	lazy = true,
 	-- dependencies = {
@@ -19,11 +20,11 @@ return {
 				local opts = { buffer = ev.buf, silent = true }
 
 				-- set keybinds
-				opts.desc = "Go to declaration"
-				vim.keymap.set("n", "gd", vim.lsp.buf.declaration, opts)
+				opts.desc = "Go to definition"
+				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
 
 				opts.desc = "Go to declaration"
-				vim.keymap.set("n", "gD", vim.lsp.buf.type_definition, opts)
+				vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
 
 				opts.desc = "Go to implementation"
 				vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
