@@ -1,5 +1,7 @@
 return {
 	'saghen/blink.cmp',
+	enabled = true,
+
 	version = '*',
 	opts = {
 		appearance = {
@@ -11,8 +13,9 @@ return {
 				enabled = true,
 			}
 		},
-	},
-	sources = {
-		default = { 'lsp', 'path', 'buffer' }
+		sources = {
+			default = { 'lsp', 'path', 'buffer' },
+			cmdline = {},
+		},
 	},
 }

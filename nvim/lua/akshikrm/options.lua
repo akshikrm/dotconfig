@@ -33,4 +33,4 @@ vim.opt.incsearch = true
 vim.opt.cursorline = true
 vim.opt.splitright = true
 
-vim.opt.statusline = "%y[%n] %t%h%m%r%w  %=  %l,%c | %P"
+vim.opt.statusline = "%f%h%m%r%w  %= %y %l,%c | %P"
