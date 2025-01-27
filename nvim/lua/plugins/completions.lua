@@ -1,7 +1,6 @@
 return {
 	'saghen/blink.cmp',
 	enabled = true,
-
 	version = '*',
 	opts = {
 		appearance = {
@@ -9,9 +8,6 @@ return {
 		},
 		completion = {
 			menu = { auto_show = false },
-			ghost_text = {
-				enabled = true,
-			}
 		},
 		sources = {
 			default = { 'lsp', 'path', 'buffer' },

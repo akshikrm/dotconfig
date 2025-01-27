@@ -6,7 +6,7 @@
 	padding ={x = 3, y=2}
 	dynamic_padding= true
 	startup_mode="Maximized"
-	opacity=0.92
+	opacity=0.9
 
 
 [font]
