@@ -38,3 +38,12 @@ export FZF_DEFAULT_COMMAND="fzf --height 40% --tmux bottom,40% --border top --la
 # GO
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:$GOBIN
+
+
+export LESS_TERMCAP_mb=$'\e[1;31m' # start bold red
+export LESS_TERMCAP_md=$'\e[1;38;5;74m' # start bold cyan
+export LESS_TERMCAP_me=$'\e[0m' # end all modes
+export LESS_TERMCAP_se=$'\e[0m' # end standout-mode
+export LESS_TERMCAP_so=$'\e[01;44;33m' # start standout-mode - info box
+export LESS_TERMCAP_us=$'\e[1;32m' # start underline green
+export LESS_TERMCAP_ue=$'\e[0m' # end underline
