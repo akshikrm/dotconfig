@@ -1,5 +1,4 @@
 brew "fzf"
-brew "gcc"
 brew "htop"
 brew "neovim"
 brew "nvm"
