@@ -22,12 +22,6 @@ export NVM_DIR="$HOME/.nvm"
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source $ZDOTDIR/gitstatus/gitstatus.prompt.zsh
-
-NEWLINE=$'\n' 
-PS1='%~ $ '
-RPROMPT=' ${GITSTATUS_PROMPT} [ %n:%* ]'
-
 
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
@@ -38,7 +32,6 @@ export FZF_DEFAULT_COMMAND="fzf --height 40% --tmux bottom,40% --border top --la
 # GO
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:$GOBIN
-
 
 export LESS_TERMCAP_mb=$'\e[1;31m' # start bold red
 export LESS_TERMCAP_md=$'\e[1;38;5;74m' # start bold cyan
