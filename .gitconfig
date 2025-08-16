@@ -1,0 +1,11 @@
+[user]
+	email = akshikrm@gmail.com
+	name = Akshay Krishna
+[alias]
+	lg = log --graph --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(white)%cr%Creset %C(bold blue)<%an>%Creset' --abbrev-commit
+	sc = switch -c
+	s = switch
+	sb = switch -
+	c = commit
+	cm = commit -m
+	alias = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
