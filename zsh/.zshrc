@@ -31,7 +31,9 @@ source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND="fzf --height 40% --tmux bottom,40% --border top --layout reverse --preview 'head {+}' --color='preview-border:-1' --highlight-line --preview-label='preview'"
 # GO
 export GOBIN=$HOME/go/bin
+export RUSTBIN=$HOME/.cargo/bin
 export PATH=$PATH:$GOBIN
+export PATH=$PATH:$RUSTBIN
 
 export LESS_TERMCAP_mb=$'\e[1;31m' # start bold red
 export LESS_TERMCAP_md=$'\e[1;38;5;74m' # start bold cyan
@@ -40,3 +42,5 @@ export LESS_TERMCAP_se=$'\e[0m' # end standout-mode
 export LESS_TERMCAP_so=$'\e[01;44;33m' # start standout-mode - info box
 export LESS_TERMCAP_us=$'\e[1;32m' # start underline green
 export LESS_TERMCAP_ue=$'\e[0m' # end underline
+
+
