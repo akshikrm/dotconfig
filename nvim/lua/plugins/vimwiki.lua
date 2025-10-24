@@ -1,12 +1,14 @@
 return {
-	'vimwiki/vimwiki',
+	"vimwiki/vimwiki",
+	name = "vimwiki",
+	lazy = false,
 	init = function()
 		vim.g.vimwiki_list = {
 			{
-				path = '~/notes/',
+				path = '~/Notes/',
 				syntax = 'markdown',
 				ext = '.md'
-			}
+			},
 		}
 	end
 }

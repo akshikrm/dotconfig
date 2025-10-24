@@ -8,18 +8,12 @@ return {
 		local lspconfig = require("lspconfig")
 		local mason_lspconfig = require("mason-lspconfig")
 		local keymap = vim.keymap -- for conciseness
-
-
 		vim.api.nvim_create_autocmd("LspAttach", {
 			group = vim.api.nvim_create_augroup("UserLspConfig", {}),
 			callback = function(ev)
 				-- Buffer local mappings.
 				--         -- See `:help vim.lsp.*` for documentation on any of the below functions
 				local opts = { buffer = ev.buf, silent = true }
-
-				opts.desc = "List all references"
-				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
-
 
 				-- set keybinds
 				opts.desc = "Go to definition"
@@ -30,6 +24,10 @@ return {
 
 				opts.desc = "Go to implementation"
 				vim.keymap.set("n", "gi", vim.lsp.buf.implementation, opts)
+
+
+				opts.desc = "Go To Reference"
+				vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
 
 				opts.desc = "[C]ode [A]ction"
 				keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts) -- see available code actions, in visual mode will apply to selection
@@ -58,19 +56,6 @@ return {
 			function(server_name)
 				lspconfig[server_name].setup {
 				}
-			end,
-			["emmet_ls"] = function()
-				lspconfig.emmet_ls.setup({
-					filetypes = {
-						'html',
-						'templ',
-						'css',
-						'gohtmltmpl',
-						'php',
-						'javascriptreact',
-						'typescriptreact',
-					},
-				})
 			end,
 		})
 	end,
