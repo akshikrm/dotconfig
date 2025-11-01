@@ -15,6 +15,7 @@ bindkey '^[[B' history-search-forward
 # Custom alias
 alias conf='cd ~/.config/'
 alias dev='cd ~/Developer/'
+alias qt='qutebrowser'
 
 export NVM_DIR="$HOME/.nvm"
 	[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -44,3 +45,5 @@ export LESS_TERMCAP_us=$'\e[1;32m' # start underline green
 export LESS_TERMCAP_ue=$'\e[0m' # end underline
 
 
+export PATH=$HOME/bin/:$PATH
+export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"

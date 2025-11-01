@@ -1,6 +1,6 @@
 [user]
-	email = akshikrm@proton.me
-	name = Akshay Krishna
+	email = thecaspercraft@gmail.com
+	name = casper
 [alias]
 	lg = log --graph --pretty=format:'%C(yellow)%h%Creset %C(auto)%d%Creset %s %C(white)%cr%Creset %C(bold blue)<%an>%Creset' --abbrev-commit
 	sc = switch -c

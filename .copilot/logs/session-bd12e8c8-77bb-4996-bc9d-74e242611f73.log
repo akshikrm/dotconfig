@@ -1,0 +1,12 @@
+2025-11-01T14:32:34.321Z [INFO] Starting Copilot CLI: 0.0.352
+Commit: e743766
+2025-11-01T14:32:34.322Z [INFO] Node.js version: v22.18.0
+2025-11-01T14:32:34.348Z [INFO] Login status unknown
+2025-11-01T14:32:34.361Z [ERROR] Error checking for updates: TypeError: Cannot read properties of undefined (reading 'paths')
+2025-11-01T14:32:35.199Z [LOG] Starting remote MCP client for github-mcp-server with url: https://api.individual.githubcopilot.com/mcp/readonly
+2025-11-01T14:32:35.199Z [LOG] Creating MCP client for github-mcp-server...
+2025-11-01T14:32:35.203Z [LOG] Connecting MCP client for github-mcp-server...
+2025-11-01T14:32:36.421Z [LOG] MCP client for github-mcp-server connected, took 1218ms
+2025-11-01T14:32:36.421Z [LOG] Started MCP client for remote server github-mcp-server
+2025-11-01T14:32:36.421Z [LOG] GitHub MCP server configured after authentication
+2025-11-01T14:32:36.439Z [INFO] Logged in as user: akshikrm
